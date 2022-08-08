@@ -10,6 +10,9 @@
 
 body {
   background: #cee5d0;
+  background-color: #fbab7e;
+  background-image: linear-gradient(to right, #fbab7e 0%, #f7ce68 100%);
+
   max-height: 1000px;
   max-width: 100%;
   display: flex;
@@ -21,14 +24,13 @@ body {
 }
 
 .profile-img img {
-  width: 125px;
-  margin-top: 8em;
-  border: 2px solid black;
+  width: 100px;
+  margin-top: 6rem;
   border-radius: 20%;
 }
 
 .profile-details h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .profile-details p {
@@ -42,21 +44,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 1.5rem;
   margin-top: 2em;
 }
 
+.socials .instagram,
+.twitter,
+.github {
+  background-image: radial-gradient(circle 489px at 49.3% 46.6%, rgba(255, 214, 126, 1) 0%, rgba(253, 200, 0, 1) 100.2%);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  text-transform: uppercase;
+  transition: transform 0.3s linear, box-shadow 0.3s linear;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
+
 .socials .icon {
-  width: 40px;
+  vertical-align: middle;
+  width: 25px;
   transition: box-shadow 240ms ease-in-out;
+  margin: 0 0.5rem;
 }
 
-.socials .icon:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 8px;
+.socials .instagram:hover,
+.twitter:hover,
+.github:hover {
+  transform: translate(4px, -4px);
+  box-shadow: -10px 8px 0 rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 280px) {
+@media (max-width: 468px) {
   body {
     text-align: center;
     display: flex;
@@ -75,10 +97,13 @@ body {
   }
 
   .socials {
-    margin-top: 1em;
+    margin-top: 3rem;
+    flex-direction: column;
   }
-
+  .socials a {
+    font-size: 1.2rem;
+  }
   .socials .icon {
-    width: 30px;
+    width: 25px;
   }
 } ;
